@@ -11,7 +11,7 @@ Reducer<Device> deviceReducer = combineReducers<Device>([
 
 Device loginReducer(Device devices, LoginAction action) {
   print(devices.toString());
-  return devices.copyWith(isLogin: action.status);
+  return devices.copyWith(isLogin: action.status, name: action.name);
 }
 
 Device logoutReducer(Device devices, LogoutAction action){

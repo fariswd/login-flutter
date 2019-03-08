@@ -1,6 +1,7 @@
 class LoginAction {
   final bool status;
-  LoginAction({this.status});
+  final String name;
+  LoginAction({this.status, this.name});
 }
 
 class LogoutAction {

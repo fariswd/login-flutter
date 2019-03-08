@@ -5,7 +5,15 @@ import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutterlogin/redux/actions/device_action.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController controller = TextEditingController();
+  String name;
+
   @override
   Widget build(BuildContext context) {
     return StoreConnector(
@@ -14,12 +22,31 @@ class LoginScreen extends StatelessWidget {
             appBar: AppBar(
               title: Text('login screen'),
             ),
-            body: Container(
-              child: RaisedButton(
-                onPressed: () {
-                  model.onLogin(true);
-                },
-                child: Text('login'),
+            body: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  TextField(
+                    controller: controller,
+                    decoration: InputDecoration(hintText: 'name?'),
+                    onChanged: (str) {
+                      this.setState(() {
+                        name = str;
+                      });
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0),
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      model.onLogin(true, name);
+                    },
+                    child: Text('login'),
+                  ),
+                ],
               ),
             ),
           ),
@@ -28,13 +55,13 @@ class LoginScreen extends StatelessWidget {
 }
 
 class _ViewModel {
-  final Function(bool) onLogin;
+  final Function(bool, String) onLogin;
 
   _ViewModel({this.onLogin});
 
   factory _ViewModel.create(Store<AppState> store) {
-    _onLogin(bool status) {
-      store.dispatch(LoginAction(status: status));
+    _onLogin(bool status, String name) {
+      store.dispatch(LoginAction(status: status, name: name));
     }
 
     return _ViewModel(
