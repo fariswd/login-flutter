@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 
 import 'package:flutterlogin/redux/reducers/reducers.dart';
 import 'package:flutterlogin/model/model.dart';
+import 'package:flutterlogin/redux/store.dart';
 
 import 'package:flutterlogin/screens/index_screen.dart';
 import 'package:flutterlogin/screens/login_screen.dart';
@@ -15,12 +16,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Store<AppState> store = Store<AppState>(
-      appStateReducer,
-      initialState: AppState.initialState(),
-      middleware: [],
-    );
-
     return StoreProvider<AppState>(
       store: store,
       child: StoreBuilder<AppState>(

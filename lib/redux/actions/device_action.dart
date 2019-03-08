@@ -3,4 +3,7 @@ class LoginAction {
   LoginAction({this.status});
 }
 
-class LogoutAction {}
+class LogoutAction {
+  final bool status;
+  LogoutAction({this.status});
+}
