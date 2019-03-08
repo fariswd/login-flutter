@@ -3,6 +3,4 @@ class LoginAction {
   LoginAction({this.status});
 }
 
-class LogoutAction {
-  
-}
+class LogoutAction {}

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
-import '../model/model.dart';
-import '../redux/actions.dart';
+import 'package:flutterlogin/model/model.dart';
+import 'package:flutterlogin/model/user_model.dart';
+import 'package:flutterlogin/model/device_model.dart';
 
-import './LoginScreen.dart';
-import './HomeScreen.dart';
+import 'package:flutterlogin/redux/actions/device_action.dart';
+import 'package:flutterlogin/redux/actions/user_action.dart';
+
+import './login_screen.dart';
+import './home_screen.dart';
 
 class IndexScreen extends StatelessWidget {
   // final Store<AppState> store;

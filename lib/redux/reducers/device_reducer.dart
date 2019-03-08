@@ -1,13 +1,8 @@
-import './actions.dart';
-import '../model/model.dart';
-
 import 'package:redux/redux.dart';
 
-AppState appStateReducer(AppState state, action) {
-  return AppState(
-    devices: deviceReducer(state.devices, action),
-  );
-}
+import 'package:flutterlogin/redux/actions/device_action.dart';
+import 'package:flutterlogin/model/device_model.dart';
+
 
 Reducer<Device> deviceReducer = combineReducers<Device>([
   TypedReducer<Device, LoginAction>(loginReducer),

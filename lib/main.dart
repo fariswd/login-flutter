@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import './model/model.dart';
-import './redux/reducers.dart';
-import './redux/actions.dart';
+import 'package:flutterlogin/redux/reducers/reducers.dart';
+import 'package:flutterlogin/model/model.dart';
 
-import 'package:flutterlogin/screens/IndexScreen.dart';
-import 'package:flutterlogin/screens/LoginScreen.dart';
-import 'package:flutterlogin/screens/HomeScreen.dart';
+import 'package:flutterlogin/screens/index_screen.dart';
+import 'package:flutterlogin/screens/login_screen.dart';
+import 'package:flutterlogin/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
