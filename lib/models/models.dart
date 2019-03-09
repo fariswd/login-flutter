@@ -7,6 +7,24 @@ class AppState {
 
   AppState({this.devices, this.users});
 
-  AppState.initialState() : devices = Device(),
-                            users = User();
+  AppState.initialState()
+      : devices = Device(),
+        users = User();
+
+  static AppState fromJson(dynamic json) {
+    print(json);
+    if (json != null) {
+      return AppState(
+        devices: Device.fromJson(json['devices']),
+      );
+    } else {
+      return AppState.initialState();
+    }
+  }
+
+  dynamic toJson() => {
+    'devices': devices,
+    'users': users,
+  };
+
 }

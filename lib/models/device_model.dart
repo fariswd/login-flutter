@@ -14,10 +14,18 @@ class Device {
   }
 
   Map toJson() => {
-        'id': (id as int),
+        'id': id,
         'name': name,
         'isLogin': isLogin,
       };
+
+  static Device fromJson(json) {
+    return Device(
+      id: json['id'],
+      name: json['name'],
+      isLogin: json['isLogin'],
+    );
+  }
 
   @override
   String toString() {
