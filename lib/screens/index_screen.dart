@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutterlogin/redux/store.dart';
+import 'package:flutterlogin/utils/store.dart';
 
 import 'package:flutterlogin/screens/home_screen.dart';
 import 'package:flutterlogin/screens/login_screen.dart';

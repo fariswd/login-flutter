@@ -1,5 +1,5 @@
-import 'package:flutterlogin/model/device_model.dart';
-import 'package:flutterlogin/model/user_model.dart';
+import 'package:flutterlogin/models/device_model.dart';
+import 'package:flutterlogin/models/user_model.dart';
 
 class AppState {
   final Device devices;

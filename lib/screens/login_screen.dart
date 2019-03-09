@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlogin/model/model.dart';
+import 'package:flutterlogin/models/models.dart';
 
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:flutterlogin/redux/actions/device_action.dart';
+import 'package:flutterlogin/actions/device_action.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
