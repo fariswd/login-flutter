@@ -19,9 +19,6 @@ class _LoginScreenState extends State<LoginScreen> {
     return StoreConnector(
       converter: (Store<AppState> store) => _ViewModel.create(store),
       builder: (BuildContext context, _ViewModel model) => Scaffold(
-            appBar: AppBar(
-              title: Text('login screen'),
-            ),
             body: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Column(
