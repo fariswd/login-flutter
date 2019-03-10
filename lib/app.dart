@@ -8,6 +8,7 @@ import 'package:flutterlogin/models/models.dart';
 import 'package:flutterlogin/screens/index_screen.dart';
 import 'package:flutterlogin/screens/login_screen.dart';
 import 'package:flutterlogin/screens/home_screen.dart';
+import 'package:flutterlogin/screens/quote_screen.dart';
 
 class MyApp extends StatelessWidget {
   final Store<AppState> store;
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
             routes: {
               '/login': (context) => LoginScreen(),
               '/home': (context) => HomeScreen(),
+              '/quote': (context) => QuoteScreen(),
             },
           );
         },

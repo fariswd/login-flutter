@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
                 children: <Widget>[
                   UserAccountsDrawerHeader(
                     accountName: Text(model.devices.name),
+                    accountEmail: Text('welcome!'),
                   ),
                   ListTile(
                     onTap: () {
@@ -32,6 +33,12 @@ class HomeScreen extends StatelessWidget {
                       model.onLogout(false);
                     },
                     title: Text('logout'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.popAndPushNamed(context, '/quote');
+                    },
+                    title: Text('quote'),
                   )
                 ],
               ),
